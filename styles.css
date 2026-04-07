@@ -122,6 +122,8 @@ header {
   font-size: 24px;
   color: var(--accent);
   flex-shrink: 0;
+  /* Photo support */
+  object-fit: cover;
 }
 
 .hero-content h1 {
