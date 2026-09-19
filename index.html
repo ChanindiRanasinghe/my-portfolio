@@ -3,157 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chanindi Ranasinghe - Portfolio</title>
+    <title>Chanindi Ranasinghe - Creative Portfolio</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- Google Fonts: Outfit & Inter for maximum clarity -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">CR</div>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#education">Education</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#volunteering">Volunteering</a>
-                    <a href="#project">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <!-- Floating Navigation Bar -->
+    <header class="navbar-header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">CR<span class="logo-dot">.</span></a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#project">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#volunteering">Volunteering</a>
+                <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="about">
+    <!-- Hero Section (Editorial Layout matching reference) -->
+    <section id="hero" class="hero-editorial">
+        <div class="hero-bg-wrapper">
+            <img src="hero_bg.jpg" alt="Editorial Background" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content-wrapper">
+            <!-- Top Metadata Bar -->
+            <div class="hero-top-bar">
+                <span></span>
+                <span class="meta-date">19 SEP, 2026</span>
+            </div>
+
+            <!-- Center Editorial Typography -->
+            <div class="hero-center-typography">
+                <h1 class="editorial-title">Chanindi</h1>
+                <div class="editorial-subtitle-wrapper">
+                    <span class="editorial-subtitle">Ranasinghe</span>
+                </div>
+            </div>
+
+            <!-- Bottom Information Bar -->
+            <div class="hero-bottom-bar">
+                <div class="meta-col author">
+                    <span class="meta-label">PRESENTER</span>
+                    <span class="meta-val">Chanindi Ranasinghe</span>
+                </div>
+                <div class="meta-col email">
+                    <span class="meta-label">EMAIL</span>
+                    <a href="mailto:chanindiranasinghe@gmail.com" class="meta-val">chanindiranasinghe@gmail.com</a>
+                </div>
+                <div class="meta-col handle">
+                    <span class="meta-label">LINKEDIN</span>
+                    <a href="https://www.linkedin.com/in/chanindi-ranasinghe-292258274" target="_blank" class="meta-val">Chanindi Ranasinghe</a>
+                </div>
+                <div class="meta-col phone">
+                    <span class="meta-label">PHONE</span>
+                    <a href="tel:0758781860" class="meta-val">+94 758 781 860</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
         <div class="container">
-            <div class="hero">
-                <img src="profile.png" alt="Chanindi Ranasinghe" class="profile-img">
-                <div class="hero-content">
-                    <h1>Chanindi Ranasinghe</h1>
-                    <h2>IT Student & HR Executive</h2>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> chanindiranasinghe@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> 0758781860</p>
+            <div class="about-grid">
+                <div class="about-img-wrapper">
+                    <div class="img-frame">
+                        <img src="profile.png" alt="Chanindi Ranasinghe" class="profile-img">
+                        <div class="img-glow"></div>
                     </div>
-                    <a href="#contact" class="btn">Get In Touch</a>
+                </div>
+                <div class="about-content">
+                    <div class="section-tag"><i class="fas fa-user-astronaut"></i> ABOUT ME</div>
+                    <h2 class="section-heading">Bridging Technology & Human Operations</h2>
+                    <p class="about-lead">
+                        I am an Information Systems undergraduate at Sabaragamuwa University of Sri Lanka and an HR Junior Executive with a passion for software engineering, web design, and organization systems.
+                    </p>
+                    <p class="about-text">
+                        With hands-on experience in Java development, database management, and end-to-end recruitment pipelines, I bring a unique dual perspective combining technical analytical capabilities with corporate administration and graphic design expertise.
+                    </p>
+
+                    <div class="highlights-row">
+                        <div class="highlight-item">
+                            <span class="highlight-num">3+</span>
+                            <span class="highlight-label">Years Learning Tech & Design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-num">6+</span>
+                            <span class="highlight-label">Core Tech & HR Projects</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-num">13+</span>
+                            <span class="highlight-label">Months Professional Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                        <a href="#project" class="btn btn-secondary"><i class="fas fa-cubes"></i> View Projects</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="section-padding section-alt">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="card-container">
-                <div class="card">
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> ACADEMICS</span>
+                <h2 class="section-heading">Education & Qualifications</h2>
+            </div>
+            
+            <div class="card-grid">
+                <div class="editorial-card">
+                    <div class="card-icon"><i class="fas fa-university"></i></div>
+                    <span class="card-badge">Degree Program</span>
                     <h3>BSc Information Systems</h3>
-                    <span class="date">Sabaragamuwa University of Sri Lanka</span>
-                    <p>Currently pursuing a degree in Information Systems with a focus on business technology integration, software engineering, and database systems.</p>
+                    <span class="card-sub">Sabaragamuwa University of Sri Lanka</span>
+                    <p>Pursuing a comprehensive degree focused on business technology integration, software engineering principles, database architecture, and system design.</p>
                 </div>
-                <div class="card">
+                <div class="editorial-card">
+                    <div class="card-icon"><i class="fas fa-school"></i></div>
+                    <span class="card-badge">High School</span>
                     <h3>Advanced Level</h3>
-                    <span class="date">Boswell College International</span>
-                    <p>Physical Science stream with a focus on Mathematics, Physics, and Chemistry.</p>
+                    <span class="card-sub">Boswell College International</span>
+                    <p>Physical Science stream with rigorous coursework in Higher Mathematics, Applied Physics, and Chemistry foundation.</p>
                 </div>
-                <div class="card">
-                    <h3>CIMA</h3>
-                    <span class="date">Chartered Institute of Management Accountants</span>
-                    <p>Following the CIMA professional qualification to combine business technology with strategic financial expertise.</p>
+                <div class="editorial-card">
+                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <span class="card-badge">Professional</span>
+                    <h3>CIMA Qualification</h3>
+                    <span class="card-sub">Chartered Institute of Management Accountants</span>
+                    <p>Following CIMA professional studies to blend technological systems expertise with financial management and corporate strategy.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming & Web</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">Java</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-microchip"></i> EXPERTISE</span>
+                <h2 class="section-heading">Skills & Technologies</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Category 1 -->
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming & Web</h3>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">HTML5 / CSS3 / JavaScript</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 90%"></div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Java</span><span class="pct">85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Python</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 75%"></div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML5 / CSS3 / JavaScript</span><span class="pct">90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">C Programming</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 70%"></div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python</span><span class="pct">75%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>C Programming</span><span class="pct">70%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Databases & Frameworks</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">SQL & MySQL Database</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
+                <!-- Category 2 -->
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases & Frameworks</h3>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Node.js & REST APIs</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 75%"></div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>SQL & MySQL Database</span><span class="pct">80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Firebase / Cloud Tools</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 70%"></div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Node.js & REST APIs</span><span class="pct">75%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Git & Version Control</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Firebase / Cloud Tools</span><span class="pct">70%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git & Version Control</span><span class="pct">85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Design & Operations</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">Graphic Design (Figma, Canva)</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 90%"></div>
+                <!-- Category 3 -->
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Design & Operations</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Graphic Design (Figma, Canva)</span><span class="pct">90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HR Systems & Recruitment</span><span class="pct">85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Petty Cash & Admin Management</span><span class="pct">80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Leadership & Communication</span><span class="pct">90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">HR Systems & Recruitment</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Placed Right After Skills) -->
+    <section id="project" class="section-padding section-alt">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-folder-open"></i> PORTFOLIO</span>
+                <h2 class="section-heading">Featured Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Ongoing Group Project: ElderExpert -->
+                <div class="project-card ongoing-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type ongoing"><i class="fas fa-users-cog"></i> Ongoing Group Project</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>ElderExpert</h3>
+                        <p class="project-desc">A comprehensive elderly care and healthcare assistance web & mobile platform built to connect senior citizens with qualified caregivers, medical appointment scheduling, and emergency alerts.</p>
+                        <ul class="project-bullets">
+                            <li>Intelligent caregiver matching & appointment scheduling system</li>
+                            <li>Health indicator tracking & medication reminder notifications</li>
+                            <li>Real-time emergency alert dispatch with family notification logs</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>React / Web</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>Group Project</span>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Petty Cash & Admin Management</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 80%"></div>
+                </div>
+
+                <!-- Ongoing Individual Project: Stitch Link -->
+                <div class="project-card ongoing-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type ongoing-ind"><i class="fas fa-user-cog"></i> Ongoing Individual Project</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Stitch Link</h3>
+                        <p class="project-desc">An ongoing web-based custom tailoring and fashion management platform facilitating client measurement logging, stitching appointment bookings, and order progress tracking.</p>
+                        <ul class="project-bullets">
+                            <li>Custom tailoring measurement logging & client profile management</li>
+                            <li>Interactive stitching appointment booking & order status pipeline</li>
+                            <li>Dynamic style catalog & garment customization interface</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>HTML5/CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Database</span>
+                            <span>Individual Project</span>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Leadership & Communication</div>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 90%"></div>
+                </div>
+
+                <!-- Project: HR Management System (Ongoing Individual Project) -->
+                <div class="project-card ongoing-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type ongoing-ind"><i class="fas fa-user-cog"></i> Ongoing Individual Project</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>HR Management System</h3>
+                        <p class="project-desc">Web-based HR portal streamlining candidate evaluation pipelines, employee records, and petty cash administration.</p>
+                        <ul class="project-bullets">
+                            <li>Candidate tracking system (CTS) with stage logging</li>
+                            <li>Employee directory & onboarding documentation portal</li>
+                            <li>Petty cash audit log and transaction approvals</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML5/CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: ResQNow -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type"><i class="fas fa-mobile-alt"></i> Mobile App</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>ResQNow - Disaster Reporting App</h3>
+                        <p class="project-desc">Real-time emergency disaster reporting platform facilitating urgent incident reporting, location tracking, and SOS signal dispatch.</p>
+                        <ul class="project-bullets">
+                            <li>Real-time incident reporting with GPS location tagging</li>
+                            <li>Emergency alert broadcasting & SOS signal dispatch</li>
+                            <li>Resource allocation tracking for emergency responders</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>Android</span>
+                            <span>Firebase</span>
+                            <span>Google Maps API</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: World Documentaries Website -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type"><i class="fas fa-globe"></i> Web Design</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>World Documentaries Website</h3>
+                        <p class="project-desc">Interactive web application dedicated to showcasing documentaries worldwide with review management and search filtering.</p>
+                        <ul class="project-bullets">
+                            <li>Categorized documentary catalog with live search</li>
+                            <li>User ratings, review management, and video previews</li>
+                            <li>Responsive layout with dynamic UI elements</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Personal Portfolio Website -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-header-row">
+                            <span class="project-type"><i class="fas fa-user-circle"></i> Branding</span>
+                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="github-icon-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Personal Portfolio Website</h3>
+                        <p class="project-desc">Editorial personal branding portfolio built to highlight technical projects, skills, and HR background with rich visual aesthetics.</p>
+                        <ul class="project-bullets">
+                            <li>Editorial typography layout & dark studio color palette</li>
+                            <li>Fully responsive mobile & desktop navigation</li>
+                            <li>Interactive skill indicators and dark glass cards</li>
+                        </ul>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Editorial UI</span>
                         </div>
                     </div>
                 </div>
@@ -162,182 +408,112 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section id="experience">
+    <section id="experience" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="work-item">
-                <h3>HR Junior Executive</h3>
-                <span class="date">Businessfocus360 - 7 months</span>
-                <ul>
-                    <li>Managed end-to-end recruitment pipelines, candidate screening, and interview scheduling</li>
-                    <li>Handled petty cash operations, financial documentation, and expense tracking</li>
-                    <li>Assisted in HR policy implementation, employee onboarding, and engagement initiatives</li>
-                </ul>
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> CAREER</span>
+                <h2 class="section-heading">Work Experience</h2>
             </div>
             
-            <div class="work-item">
-                <h3>HR Intern</h3>
-                <span class="date">Businessfocus360 - 6 months</span>
-                <ul>
-                    <li>Supported recruitment activities, applicant profile evaluations, and record management</li>
-                    <li>Assisted in preparing HR documentation, contracts, and onboarding packages</li>
-                    <li>Participated in administrative HR operations and internal team meetings</li>
-                </ul>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>HR Junior Executive</h3>
+                            <span class="timeline-period"><i class="far fa-calendar-alt"></i> 7 Months</span>
+                        </div>
+                        <span class="company-name">Businessfocus360</span>
+                        <ul class="bullet-list">
+                            <li>Managed end-to-end recruitment pipelines, candidate screening, and interview scheduling workflows</li>
+                            <li>Handled petty cash operations, financial documentation, and expense tracking with high accuracy</li>
+                            <li>Assisted in HR policy implementation, employee onboarding, and internal engagement initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>HR Intern</h3>
+                            <span class="timeline-period"><i class="far fa-calendar-alt"></i> 6 Months</span>
+                        </div>
+                        <span class="company-name">Businessfocus360</span>
+                        <ul class="bullet-list">
+                            <li>Supported recruitment activities, applicant profile evaluations, and record management systems</li>
+                            <li>Assisted in preparing HR documentation, offer contracts, and onboarding welcome packages</li>
+                            <li>Participated in administrative HR operations and internal team meetings</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Volunteering Section -->
-    <section id="volunteering">
+    <section id="volunteering" class="section-padding section-alt">
         <div class="container">
-            <h2 class="section-title">Volunteering</h2>
-            
-            <div class="volunteer-item">
-                <h3>Graphic Designer</h3>
-                <span class="date">IEEE Student Branch</span>
-                <p>Designed visual content, social media flyers, and promotional materials for technical events and international IEEE conferences.</p>
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-hands-helping"></i> COMMUNITY</span>
+                <h2 class="section-heading">Volunteering & Leadership</h2>
             </div>
             
-            <div class="volunteer-item">
-                <h3>Graphic Designer</h3>
-                <span class="date">Rotaract Club</span>
-                <p>Created branding and promotional media for community service projects, fundraisers, and leadership workshops.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Section -->
-    <section id="project">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            
-            <div class="project-grid">
-                <!-- Project 1: ResQNow -->
-                <div class="project-card">
-                    <div>
-                        <h3>ResQNow - Disaster Reporting App</h3>
-                        <p>A real-time emergency disaster reporting and community assistance platform built to facilitate urgent incident reporting, location tracking, and emergency alert dissemination during crisis situations.</p>
-                        <ul class="project-features">
-                            <li>Real-time incident reporting with GPS location tagging</li>
-                            <li>Emergency alert broadcasting & SOS signal dispatch</li>
-                            <li>Resource allocation tracking for responders and victims</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Google Maps API</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="project-link">Source Code <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+            <div class="card-grid two-col">
+                <div class="editorial-card">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <span class="card-badge">Tech Community</span>
+                    <h3>Graphic Designer</h3>
+                    <span class="card-sub">IEEE Student Branch</span>
+                    <p>Designed high-quality visual content, social media flyers, and promotional media for technical symposiums and international IEEE conferences.</p>
                 </div>
 
-                <!-- Project 2: HR Management System -->
-                <div class="project-card">
-                    <div>
-                        <h3>HR Management System</h3>
-                        <p>A comprehensive web-based HR management portal designed to streamline recruitment workflows, candidate evaluation pipelines, employee records, and petty cash administration.</p>
-                        <ul class="project-features">
-                            <li>Candidate tracking system (CTS) with interview stage logging</li>
-                            <li>Employee directory & onboarding documentation portal</li>
-                            <li>Petty cash audit log and transaction approvals</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">HTML5/CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="project-link">Source Code <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: World Documentaries Website -->
-                <div class="project-card">
-                    <div>
-                        <h3>World Documentaries Website</h3>
-                        <p>An interactive web application dedicated to showcasing documentaries from around the globe. Features categorized media browsing, user reviews, and filmmaker profiles.</p>
-                        <ul class="project-features">
-                            <li>Categorized documentary catalog with search & filtering</li>
-                            <li>User ratings, review management, and video preview embeds</li>
-                            <li>Responsive grid layout with dynamic UI elements</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Web Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Personal Portfolio Website -->
-                <div class="project-card">
-                    <div>
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A personal branding portfolio website built to showcase technical skills, professional work experience, volunteer achievements, and project achievements with a clean green and white professional aesthetic.</p>
-                        <ul class="project-features">
-                            <li>Custom CSS design system with green accent styling</li>
-                            <li>Fully responsive mobile & desktop navigation</li>
-                            <li>Interactive skill bars and project cards</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                <div class="editorial-card">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <span class="card-badge">Youth Organization</span>
+                    <h3>Graphic Designer</h3>
+                    <span class="card-sub">Rotaract Club</span>
+                    <p>Created branding identity assets and promotional media for community service projects, fundraisers, and leadership development workshops.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            
-            <div style="text-align: center; margin-top: 30px;">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> chanindiranasinghe@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 0758781860</p>
+            <div class="contact-box">
+                <div class="contact-header">
+                    <span class="section-tag"><i class="fas fa-paper-plane"></i> LET'S CONNECT</span>
+                    <h2 class="section-heading">Get In Touch</h2>
+                    <p class="contact-sub">Have a project, job opportunity, or collaboration in mind? Feel free to reach out directly!</p>
                 </div>
                 
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/ChanindiRanasinghe" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="contact-pills">
+                    <a href="mailto:chanindiranasinghe@gmail.com" class="contact-pill">
+                        <i class="fas fa-envelope"></i>
+                        <span>chanindiranasinghe@gmail.com</span>
+                    </a>
+                    <a href="tel:0758781860" class="contact-pill">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 758 781 860</span>
+                    </a>
+                </div>
+
+                <div class="social-row">
+                    <a href="https://www.linkedin.com/in/chanindi-ranasinghe-292258274" target="_blank" class="social-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ChanindiRanasinghe" target="_blank" class="social-circle" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
+    <footer class="site-footer">
+        <div class="container footer-content">
             <p>&copy; 2026 Chanindi Ranasinghe. All Rights Reserved.</p>
+            <span class="footer-tag">Designed with Editorial Excellence</span>
         </div>
     </footer>
 </body>
