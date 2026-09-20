@@ -120,6 +120,24 @@ body {
     box-shadow: 0 0 20px var(--emerald-glow);
 }
 
+.mobile-toggle {
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-heading);
+    font-size: 1.25rem;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-toggle:hover {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--emerald-light);
+    border-color: var(--emerald);
+}
+
 /* ==========================================================================
    HERO EDITORIAL SECTION (Matching Reference Design)
    ========================================================================== */
@@ -755,6 +773,12 @@ a.meta-val:hover {
     border: 1px solid rgba(251, 191, 36, 0.3);
 }
 
+.project-type.ongoing-ind {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
 .ongoing-card {
     border-color: rgba(251, 191, 36, 0.22);
     background: linear-gradient(135deg, rgba(18, 22, 31, 0.75), rgba(251, 191, 36, 0.03));
@@ -931,20 +955,60 @@ a.meta-val:hover {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN SYSTEM
    ========================================================================== */
+
+/* Large Desktops & Laptops (<= 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-content-wrapper {
+        padding: 0 24px;
+    }
+}
+
+/* Tablet Landscape / Medium Screens (<= 1024px) */
 @media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .section-padding {
+        padding: 90px 0;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
     
+    .about-img-wrapper {
+        margin: 0 auto;
+        max-width: 260px;
+    }
+
     .profile-img {
-        height: 380px;
+        height: 320px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-cta {
+        justify-content: center;
     }
     
     .card-grid, .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .hero-bottom-bar {
@@ -953,41 +1017,190 @@ a.meta-val:hover {
     }
 }
 
+/* Tablet Portrait & Mobile Screens (<= 768px) */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section-padding {
+        padding: 75px 0;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 73px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 73px);
+        background: rgba(9, 11, 14, 0.96);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px;
+        gap: 20px;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -15px 0 40px rgba(0, 0, 0, 0.7);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+        text-align: center;
+        width: 100% !important;
+    }
+
+    .hero-editorial {
+        min-height: auto;
+        padding: 110px 0 50px;
     }
 
     .hero-content-wrapper {
         height: auto;
-        padding-top: 40px;
-        gap: 60px;
+        min-height: auto;
+        gap: 40px;
+        padding: 0 16px;
+    }
+
+    .hero-center-typography {
+        padding: 10px 0;
     }
 
     .editorial-title {
-        font-size: 4rem;
+        font-size: clamp(3.2rem, 13vw, 5.5rem);
     }
 
     .editorial-subtitle {
-        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 7vw, 3rem);
     }
 
     .hero-bottom-bar {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding-top: 20px;
     }
 
     .card-grid, .card-grid.two-col, .skills-grid, .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 28px 24px;
+    }
+
+    .project-header-row {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .highlights-row {
         grid-template-columns: 1fr;
+        gap: 20px;
         text-align: center;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-dot {
+        left: 8px;
+    }
+
+    .timeline-item {
+        padding-left: 45px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .contact-box {
+        padding: 50px 24px;
     }
 
     .footer-content {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+}
+
+/* Small Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .hero-bottom-bar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-card {
+        padding: 24px 20px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: 3px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-item {
+        padding-left: 34px;
+    }
+
+    .timeline-content {
+        padding: 20px 18px;
+    }
+
+    .contact-box {
+        padding: 40px 16px;
+    }
+
+    .contact-pill {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.88rem;
+        padding: 12px 20px;
     }
 }
