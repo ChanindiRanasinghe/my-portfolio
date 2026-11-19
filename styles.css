@@ -23,3 +23,17 @@
 .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.25px) rotate(45deg)}
 .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
 @media(max-width:760px){.menu-toggle{display:flex}.nav-links{position:fixed;top:62px;right:0;width:min(340px,88vw);height:calc(100vh - 62px);height:calc(100dvh - 62px);display:flex;flex-direction:column;align-items:stretch;gap:0;padding:18px 22px;background:rgba(248,247,244,.98);border-left:1px solid var(--line);box-shadow:-18px 18px 36px rgba(32,37,32,.12);z-index:999;overflow-y:auto;transform:translateX(105%);visibility:hidden;transition:transform .25s ease,visibility .25s}.nav-links.open{transform:translateX(0);visibility:visible}.nav-links a,.nav-links a:nth-child(n){display:block;width:100%;padding:13px 3px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink)}.nav-links a:last-child{margin-top:14px;padding:12px 14px;border:0;border-radius:2px;background:var(--green);color:white;text-align:center}}
+
+/* Final portrait composition: keep the circular source intact, and blend its
+   edge into the warm sage hero instead of framing it with a hard lime block. */
+#about{position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 42%,rgba(224,231,214,.78) 0,rgba(224,231,214,0) 42%),radial-gradient(ellipse at 18% 80%,rgba(242,232,216,.7) 0,rgba(242,232,216,0) 38%),var(--paper)}
+#about:after{content:"";position:absolute;right:-180px;top:-280px;width:620px;height:620px;border:1px solid rgba(37,76,61,.08);border-radius:50%;pointer-events:none}
+.hero{position:relative;z-index:1;grid-template-columns:minmax(0,1.3fr) minmax(300px,.8fr);gap:clamp(48px,8vw,104px)}
+.hero-content h1{font-size:clamp(54px,7vw,88px);margin-top:24px}
+.hero-copy{max-width:510px}
+.avatar-frame{width:min(100%,370px);aspect-ratio:1;margin:0 auto;isolation:isolate;border-radius:50%;background:radial-gradient(circle at 48% 38%,#f1e4d1 0,#e5e9dc 62%,#d8e1d4 100%);border:1px solid rgba(255,255,255,.9);box-shadow:0 26px 70px rgba(37,76,61,.12),inset 0 0 0 8px rgba(255,255,255,.32)}
+.avatar-frame:before{inset:-12px;border:1px solid rgba(37,76,61,.14);border-radius:50%;background:radial-gradient(circle,rgba(224,231,214,.38),rgba(224,231,214,0) 72%);z-index:-1}
+.avatar{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;border:0;background:transparent;filter:saturate(.88) contrast(.98)}
+.photo-note{right:-10px;bottom:9px;padding:11px 16px;border-radius:999px;background:rgba(248,247,244,.94);color:var(--green);border:1px solid rgba(255,255,255,.95);box-shadow:0 9px 28px rgba(32,37,32,.12);backdrop-filter:blur(12px);font-size:10px;font-weight:700;letter-spacing:.12em}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:37px}.avatar-frame{width:min(72vw,310px);margin:0 auto}.hero-content{order:1}.photo-note{right:-8px;bottom:7px}.hero-content h1{font-size:clamp(54px,12vw,68px)}}
+@media(max-width:480px){.avatar-frame{width:min(76vw,275px)}.hero-content h1{font-size:clamp(48px,13vw,62px)}.hero-content{padding-top:5px}#about{padding:55px 0 68px}}
